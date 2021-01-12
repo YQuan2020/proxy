@@ -7,11 +7,11 @@ export class Request {
         const result = await Axios.get(url)
         console.log(result)
         console.log('===============data===============')
-        return result
+        return result.data
     }
 
     async Post (url, body) {
         const result = await Axios.post(url, body)
-        return result
+        return result.data
     }
 }

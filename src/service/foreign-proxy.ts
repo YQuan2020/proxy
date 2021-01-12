@@ -25,7 +25,6 @@ export class ForeignProxy {
                 break
             case Post:
                 const res = await this.request.Post(url, data.body)
-                console.log('res --->', res)
                 result = res.data
                 break
             default:
