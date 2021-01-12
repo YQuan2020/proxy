@@ -2,7 +2,11 @@ import Axios from 'axios'
 
 export class Request {
     async Get (url) {
+        console.log('===============url===============')
+        console.log(url)
         const result = await Axios.get(url)
+        console.log(result)
+        console.log('===============data===============')
         return result
     }
 
