@@ -16,12 +16,13 @@ export class ForeignProxy {
      */
     async send (data) {
         let result
+        const url = Buffer.from(data.url, 'base64').toString('ascii')
         switch (data.method) {
             case Get:
-                result = await this.request.Get(data.url)
+                result = await this.request.Get(url)
                 break
             case Post:
-                const res = await this.request.Post(data.url, data.body)
+                const res = await this.request.Post(url, data.body)
                 console.log('res --->', res)
                 result = res.data
                 break
