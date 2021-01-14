@@ -1,4 +1,4 @@
-import ProxyController from './proxy-controller'
+import {ProxyController} from './proxy-controller'
 
 export {
     ProxyController
